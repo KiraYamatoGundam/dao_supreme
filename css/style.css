@@ -226,3 +226,483 @@
     line-height:1.5;
   }
 }
+
+
+/* =========================================================
+   V3.3 — Statut, statistiques et commandes
+   ========================================================= */
+
+.bot-status-section{
+  margin:64px auto 0;
+}
+
+.status-card{
+  position:relative;
+  z-index:1;
+  padding:34px;
+  gap:24px;
+}
+
+.stats{
+  position:relative;
+  z-index:8;
+  margin:30px auto 0 !important;
+}
+
+.status-legend span{
+  white-space:nowrap;
+}
+
+.status-legend span img{
+  flex:0 0 auto;
+}
+
+/* Le voyant animé fournit déjà la couleur : pas besoin d'une
+   deuxième pastille colorée dans le texte. */
+.status-legend span{
+  font-size:0;
+}
+.status-legend span::after{
+  font-size:.82rem;
+}
+.status-legend span:nth-child(1)::after{content:"Connecté"}
+.status-legend span:nth-child(2)::after{content:"Déconnecté"}
+.status-legend span:nth-child(3)::after{content:"Maintenance"}
+.status-legend span:nth-child(4)::after{content:"Mise à jour"}
+
+.section-description{
+  color:var(--muted);
+  max-width:760px;
+  margin:12px auto 0;
+}
+
+.command-categories{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+.command-category{
+  padding:26px;
+  border:1px solid rgba(217,180,93,.28);
+  background:
+    linear-gradient(180deg,rgba(16,21,29,.96),rgba(7,10,14,.98)),
+    url("../assets/textures/obsidienne.webp") center/cover;
+  box-shadow:0 22px 55px rgba(0,0,0,.38);
+}
+
+.command-category h3{
+  margin:0 0 18px;
+  color:var(--gold2);
+  font-family:Cinzel,serif;
+  font-size:1.25rem;
+}
+
+.command-category .command-list{
+  display:grid;
+  gap:10px;
+}
+
+.command-category .command-list div{
+  grid-template-columns:minmax(170px,210px) 1fr;
+  padding:14px 16px;
+}
+
+@media(max-width:980px){
+  .command-categories{
+    grid-template-columns:1fr;
+  }
+
+  .bot-status-section{
+    margin-top:36px;
+  }
+}
+
+@media(max-width:600px){
+  .status-main{
+    flex-direction:column;
+  }
+
+  .status-meta{
+    grid-template-columns:1fr;
+  }
+
+  .status-legend{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .status-legend span{
+    justify-content:flex-start;
+  }
+
+  .command-category{
+    padding:18px;
+  }
+
+  .command-category .command-list div{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* =========================================================
+   V3.4 — Bouton d'invitation du serveur Discord
+   ========================================================= */
+
+.hero-actions{
+  align-items:center;
+}
+
+.server-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:0 28px;
+  font-weight:800;
+  font-family:Cinzel,serif;
+  color:#dce9ff;
+  border:1px solid rgba(88,101,242,.72);
+  background:
+    linear-gradient(135deg,rgba(88,101,242,.22),rgba(15,18,24,.94));
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.03),
+    0 0 28px rgba(88,101,242,.16);
+  transition:.2s transform,.2s filter,.2s box-shadow;
+}
+
+.server-btn:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.1);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.05),
+    0 0 34px rgba(88,101,242,.28);
+}
+
+@media(max-width:600px){
+  .server-btn{
+    width:100%;
+  }
+}
+
+
+/* =========================================================
+   V3.5 — Légende des statuts et audit final
+   ========================================================= */
+
+.status-legend span{
+  display:inline-flex;
+  align-items:center;
+  gap:0 !important;
+  font-size:.82rem !important;
+  white-space:nowrap;
+}
+
+.status-legend span::after{
+  content:none !important;
+  display:none !important;
+}
+
+.status-legend span img{
+  width:24px;
+  height:24px;
+  margin:0 !important;
+  padding:0 !important;
+  object-fit:contain;
+  flex:0 0 auto;
+}
+
+.bot-invite-link.is-disabled{
+  opacity:.58;
+  cursor:not-allowed;
+  filter:grayscale(.18);
+}
+
+.bot-invite-link.is-disabled:hover{
+  transform:none;
+  filter:grayscale(.18);
+}
+
+
+/* =========================================================
+   V3.6 — Finition visuelle du site
+   ========================================================= */
+
+/* HERO : texte entièrement à gauche, temple dégagé à droite */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  min-height:900px;
+  padding:190px clamp(42px,7vw,130px) 100px;
+  background:
+    linear-gradient(90deg,rgba(3,4,7,.98) 0%,rgba(3,4,7,.94) 25%,rgba(3,4,7,.55) 53%,rgba(3,4,7,.06) 78%),
+    url("../assets/backgrounds/hero-temple.webp") 68% center/cover no-repeat;
+}
+
+.hero-copy{
+  width:min(720px,48vw);
+  margin:0;
+  text-align:left;
+}
+
+.hero h1{
+  font-size:clamp(3.15rem,5.35vw,6.15rem);
+  max-width:710px;
+}
+
+.hero .divider{
+  width:min(620px,100%);
+  background-position:left center;
+}
+
+.hero .lead{
+  max-width:650px;
+  font-size:clamp(1rem,1.18vw,1.18rem);
+}
+
+.hero-actions{
+  justify-content:flex-start;
+}
+
+/* CARTES : cadre plus haut, contenu mieux centré, titre plus petit */
+.cards{
+  gap:20px;
+}
+
+.cards article{
+  min-height:390px !important;
+  padding:88px 50px 72px !important;
+  justify-content:flex-start;
+}
+
+.cards article::after{
+  inset:0 !important;
+  background-size:100% 100% !important;
+}
+
+.feature-title{
+  display:flex;
+  align-items:center;
+  gap:0;
+  min-height:70px;
+  margin:0 0 18px;
+}
+
+.feature-title img{
+  position:static !important;
+  width:58px !important;
+  height:58px !important;
+  margin:0 !important;
+  flex:0 0 auto;
+  object-fit:contain;
+}
+
+.feature-title h3{
+  margin:0 !important;
+  font-size:clamp(1rem,1.25vw,1.28rem) !important;
+  line-height:1.15 !important;
+  white-space:normal;
+}
+
+.cards article p{
+  font-size:clamp(.9rem,1vw,1.02rem) !important;
+  line-height:1.48 !important;
+}
+
+/* COMMANDES : titre équilibré et grille claire */
+.commands header{
+  max-width:850px;
+}
+
+.commands h2{
+  font-size:clamp(2.35rem,4.5vw,4.7rem);
+  line-height:1.08;
+}
+
+.command-category{
+  border-color:rgba(217,180,93,.36);
+  box-shadow:0 20px 48px rgba(0,0,0,.38);
+}
+
+.command-category h3{
+  font-size:1.12rem;
+  letter-spacing:.02em;
+}
+
+.command-category .command-list div{
+  grid-template-columns:minmax(135px,180px) 1fr;
+  gap:14px;
+  padding:13px 15px;
+}
+
+.command-category .command-list code{
+  font-size:.88rem;
+}
+
+/* STATUT : compact, sans gros cercle, sans doubles pastilles */
+.bot-status-section{
+  margin:48px auto 0;
+}
+
+.status-card{
+  padding:30px 34px;
+  gap:20px;
+}
+
+.status-header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+.status-header h2{
+  margin:3px 0 0;
+  font-family:Cinzel,serif;
+  font-size:clamp(2rem,3.6vw,3.45rem);
+  line-height:1.05;
+}
+
+.status-current{
+  display:inline-flex;
+  align-items:center;
+  gap:0;
+  min-height:48px;
+  color:var(--status-color);
+  font-weight:800;
+  font-size:1.08rem;
+}
+
+.status-current img{
+  width:38px;
+  height:38px;
+  margin:0;
+  object-fit:contain;
+}
+
+.status-detail{
+  margin:-4px 0 0;
+  color:var(--muted);
+}
+
+.status-meta{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.status-meta>div{
+  min-height:82px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.status-legend{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:2px 0 0;
+}
+
+.status-legend span{
+  display:inline-flex;
+  align-items:center;
+  gap:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  color:#d3ccbf;
+  font-size:.84rem !important;
+}
+
+.status-legend span img{
+  width:25px;
+  height:25px;
+  margin:0 !important;
+}
+
+/* L'ancien grand indicateur n'est plus utilisé */
+.status-main,
+.status-icon-shell{
+  display:none !important;
+}
+
+@media(max-width:1180px){
+  .hero-copy{
+    width:min(700px,58vw);
+  }
+
+  .cards article{
+    padding:84px 42px 66px !important;
+  }
+
+  .feature-title img{
+    width:52px !important;
+    height:52px !important;
+  }
+}
+
+@media(max-width:980px){
+  .hero{
+    padding:160px 28px 80px;
+    background:
+      linear-gradient(90deg,rgba(3,4,7,.96),rgba(3,4,7,.72)),
+      url("../assets/backgrounds/hero-temple.webp") 70% center/cover no-repeat;
+  }
+
+  .hero-copy{
+    width:min(720px,100%);
+  }
+
+  .status-meta{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .cards article{
+    min-height:340px !important;
+  }
+}
+
+@media(max-width:600px){
+  .hero h1{
+    font-size:clamp(2.6rem,13vw,3.6rem);
+  }
+
+  .cards article{
+    min-height:310px !important;
+    padding:76px 30px 58px !important;
+  }
+
+  .feature-title{
+    min-height:58px;
+  }
+
+  .feature-title img{
+    width:46px !important;
+    height:46px !important;
+  }
+
+  .feature-title h3{
+    font-size:1rem !important;
+  }
+
+  .status-header{
+    align-items:flex-start;
+  }
+
+  .status-meta{
+    grid-template-columns:1fr;
+  }
+
+  .status-legend{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .command-category .command-list div{
+    grid-template-columns:1fr;
+  }
+}

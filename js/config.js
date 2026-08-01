@@ -1,9 +1,14 @@
 window.DAO_SUPREME_CONFIG = {
-  // Mets ici l'URL publique de ton API de statut quand elle sera prête.
-  // Exemple : "https://ton-api.example.com/status"
+  // Colle ici le lien OAuth2 exact généré dans :
+  // Discord Developer Portal → OAuth2 → URL Generator.
+  botInviteUrl: "",
+
+  serverInviteUrl: "https://discord.gg/gZECKTkRWD",
+
+  // URL publique de l’API de statut, lorsqu’elle sera hébergée.
   statusEndpoint: "",
 
-  // État affiché tant qu'aucune API n'est configurée :
+  // État affiché tant qu’aucune API n’est configurée :
   // "connected", "disconnected", "maintenance" ou "updating"
   fallbackStatus: "disconnected",
 

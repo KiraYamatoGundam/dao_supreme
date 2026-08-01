@@ -19,7 +19,7 @@
     <a href="#commandes">Commandes</a><a href="#galerie">Galerie</a><a href="docs.html">Documentation</a>
     <a href="terms.html">Conditions</a><a href="privacy.html">Confidentialité</a>
   </nav>
-  <a class="gold-btn top-cta" href="https://discord.com/oauth2/authorize" target="_blank" rel="noopener">Ajouter le bot</a>
+  <a class="gold-btn top-cta bot-invite-link" href="#" target="_blank" rel="noopener">Ajouter le bot</a>
 </header>
 
 <main>
@@ -30,64 +30,94 @@
     <h1>Élevez votre serveur<br>au sommet du <span>Dao</span></h1>
     <div class="divider"></div>
     <p class="lead">Modération, progression, économie, tickets, musique et automatisation réunies dans une expérience inspirée des plus grandes sectes.</p>
-    <div class="actions">
-      <a class="gold-btn" href="https://discord.com/oauth2/authorize" target="_blank" rel="noopener">➕ Ajouter le bot</a>
-      <a class="dark-btn" href="#commandes">Voir les commandes →</a>
+    <div class="actions hero-actions">
+      <a class="gold-btn bot-invite-link" href="#" target="_blank" rel="noopener">
+        ➕ Ajouter le bot
+      </a>
+      <a class="dark-btn" href="#commandes">
+        Voir les commandes →
+      </a>
+      <a class="server-btn server-invite-link" href="https://discord.gg/gZECKTkRWD" target="_blank" rel="noopener">
+        💬 Rejoindre le serveur
+      </a>
     </div>
-    <p class="edit-note">Remplace les deux liens Discord dans <code>index.html</code>.</p>
+    <p class="edit-note">
+      Serveur support officiel de 🏯・[SDS] Dao Suprême.
+    </p>
   </div>
-  <div class="hero-logo"><img src="assets/logos/logo-officiel-rond.webp" alt="Logo Dao Suprême"></div>
+  
 </section>
 
 <section class="bot-status-section" aria-labelledby="bot-status-title">
-  <div class="status-card">
-    <div class="status-main">
-      <div class="status-icon-shell">
-        <img id="bot-status-icon" src="assets/status/disconnected.webp" alt="">
-      </div>
+  <div class="status-card" data-status="disconnected">
+    <div class="status-header">
       <div>
         <p class="kicker">État du service</p>
         <h2 id="bot-status-title">Statut du bot</h2>
-        <div class="status-line">
-          <strong id="bot-status-label">🔴・Déconnecté</strong>
-          <span id="bot-status-detail">En attente de connexion à l’API de statut.</span>
-        </div>
+      </div>
+
+      <div class="status-current">
+        <img id="bot-status-icon" src="assets/status/disconnected.webp" alt="Déconnecté"><strong id="bot-status-label">・Déconnecté</strong>
       </div>
     </div>
+
+    <p id="bot-status-detail" class="status-detail">En attente de connexion à l’API de statut.</p>
 
     <div class="status-meta">
       <div><span>Latence</span><strong id="bot-latency">— ms</strong></div>
       <div><span>Uptime</span><strong id="bot-uptime">—</strong></div>
       <div><span>Version</span><strong id="bot-version">—</strong></div>
       <div><span>Dernière vérification</span><strong id="bot-last-check">—</strong></div>
+      <div><span>Serveurs</span><strong id="bot-guilds">—</strong></div>
+      <div><span>Membres</span><strong id="bot-users">—</strong></div>
+      <div><span>Commandes</span><strong id="bot-commands">—</strong></div>
+      <div><span>Modules</span><strong id="bot-cogs">—</strong></div>
     </div>
 
     <div class="status-legend" aria-label="Légende des états">
-      <span><img src="assets/status/connected.webp" alt="">🟢・Connecté</span>
-      <span><img src="assets/status/disconnected.webp" alt="">🔴・Déconnecté</span>
-      <span><img src="assets/status/maintenance.webp" alt="">🟡・Maintenance</span>
-      <span><img src="assets/status/updating.webp" alt="">🔵・Mise à jour</span>
+      <span><img src="assets/status/connected.webp" alt="Connecté">・Connecté</span>
+      <span><img src="assets/status/disconnected.webp" alt="Déconnecté">・Déconnecté</span>
+      <span><img src="assets/status/maintenance.webp" alt="Maintenance">・Maintenance</span>
+      <span><img src="assets/status/updating.webp" alt="Mise à jour">・Mise à jour</span>
     </div>
   </div>
 </section>
 
 <section class="stats">
   <article><img src="assets/icons/support.svg" alt=""><div><strong>24/7</strong><span>Protection</span></div></article>
-  <article><img src="assets/emojis/annonce.gif" alt=""><div><strong>50+</strong><span>Commandes prévues</span></div></article>
+  <article><img loading="lazy" src="assets/emojis/annonce.gif" alt=""><div><strong>40+</strong><span>Commandes disponibles</span></div></article>
   <article><img src="assets/icons/configuration.svg" alt=""><div><strong>100 %</strong><span>Personnalisable</span></div></article>
 </section>
 
-<section class="banner"><img src="assets/banners/banniere-sds-animee.gif" alt="[SDS] Dao Suprême"></section>
+<section class="banner"><img loading="lazy" src="assets/banners/banniere-sds-animee.gif" alt="[SDS] Dao Suprême"></section>
 
 <section class="content-section" id="fonctionnalites">
   <header><p class="kicker">Fonctionnalités principales</p><h2>Une seule application pour toute la secte</h2></header>
   <div class="cards">
-    <article><img src="assets/emojis/verification.gif" alt=""><h3>Protection céleste</h3><p>Automodération, anti-spam, anti-raid, sanctions et filtres configurables.</p></article>
-    <article><img src="assets/emojis/ticket.gif" alt=""><h3>Tickets</h3><p>Support, partenariats, candidatures et demandes privées organisées.</p></article>
-    <article><img src="assets/emojis/alchimie.gif" alt=""><h3>Économie de secte</h3><p>Récompenses, boutique, monnaie, profils et classements.</p></article>
-    <article><img src="assets/emojis/cultivation.gif" alt=""><h3>Niveaux et rangs</h3><p>Progression, expérience et reconnaissance des membres actifs.</p></article>
-    <article><img src="assets/emojis/meditation.gif" alt=""><h3>Musique</h3><p>Commandes audio destinées aux salons vocaux de la communauté.</p></article>
-    <article><img src="assets/emojis/annonce.gif" alt=""><h3>Journaux</h3><p>Suivi clair des événements importants pour le personnel du serveur.</p></article>
+    <article>
+      <div class="feature-title"><img loading="lazy" src="assets/emojis/verification.gif" alt=""><h3>Protection céleste</h3></div>
+      <p>Automodération, anti-spam, anti-raid, sanctions et filtres configurables.</p>
+    </article>
+    <article>
+      <div class="feature-title"><img loading="lazy" src="assets/emojis/ticket.gif" alt=""><h3>Tickets</h3></div>
+      <p>Support, partenariats, candidatures et demandes privées organisées.</p>
+    </article>
+    <article>
+      <div class="feature-title"><img loading="lazy" src="assets/emojis/alchimie.gif" alt=""><h3>Économie de secte</h3></div>
+      <p>Récompenses, boutique, monnaie, profils et classements.</p>
+    </article>
+    <article>
+      <div class="feature-title"><img loading="lazy" src="assets/emojis/cultivation.gif" alt=""><h3>Niveaux et rangs</h3></div>
+      <p>Progression, expérience et reconnaissance des membres actifs.</p>
+    </article>
+    <article>
+      <div class="feature-title"><img loading="lazy" src="assets/emojis/meditation.gif" alt=""><h3>Musique</h3></div>
+      <p>Commandes audio destinées aux salons vocaux de la communauté.</p>
+    </article>
+    <article>
+      <div class="feature-title"><img loading="lazy" src="assets/emojis/annonce.gif" alt=""><h3>Journaux</h3></div>
+      <p>Suivi clair des événements importants pour le personnel du serveur.</p>
+    </article>
   </div>
 </section>
 
@@ -103,31 +133,74 @@
     <p>Une sélection de tes emojis animés est directement intégrée aux cartes et à l’interface.</p>
   </header>
   <div class="emoji-grid">
-    <article><img src="assets/emojis/pagode.webp" alt="Pagode"><span>Pagode</span></article>
-    <article><img src="assets/emojis/cultivation.gif" alt="Cultivation"><span>Cultivation</span></article>
-    <article><img src="assets/emojis/combat.gif" alt="Combat"><span>Combat</span></article>
-    <article><img src="assets/emojis/alchimie.gif" alt="Alchimie"><span>Alchimie</span></article>
-    <article><img src="assets/emojis/ticket_open.gif" alt="Ticket"><span>Support</span></article>
-    <article><img src="assets/emojis/partenariat.gif" alt="Partenariat"><span>Partenariats</span></article>
-    <article><img src="assets/emojis/annonce.gif" alt="Annonce"><span>Annonces</span></article>
-    <article><img src="assets/emojis/groupe.gif" alt="Groupe"><span>Communauté</span></article>
+    <article><img loading="lazy" src="assets/emojis/pagode.webp" alt="Pagode"><span>Pagode</span></article>
+    <article><img loading="lazy" src="assets/emojis/cultivation.gif" alt="Cultivation"><span>Cultivation</span></article>
+    <article><img loading="lazy" src="assets/emojis/combat.gif" alt="Combat"><span>Combat</span></article>
+    <article><img loading="lazy" src="assets/emojis/alchimie.gif" alt="Alchimie"><span>Alchimie</span></article>
+    <article><img loading="lazy" src="assets/emojis/ticket_open.gif" alt="Ticket"><span>Support</span></article>
+    <article><img loading="lazy" src="assets/emojis/partenariat.gif" alt="Partenariat"><span>Partenariats</span></article>
+    <article><img loading="lazy" src="assets/emojis/annonce.gif" alt="Annonce"><span>Annonces</span></article>
+    <article><img loading="lazy" src="assets/emojis/groupe.gif" alt="Groupe"><span>Communauté</span></article>
   </div>
 </section>
 
 <section class="content-section commands" id="commandes">
-  <header><p class="kicker">Commandes</p><h2>Exemples à remplacer par les vraies commandes</h2></header>
-  <div class="command-list">
-    <div><code>/config</code><span>Configurer le serveur.</span></div>
-    <div><code>/ticket</code><span>Gérer les demandes de support.</span></div>
-    <div><code>/warn</code><span>Ajouter un avertissement.</span></div>
-    <div><code>/profile</code><span>Afficher un profil et sa progression.</span></div>
+  <header>
+    <p class="kicker">Commandes officielles</p>
+    <h2>Maîtrisez le Dao du serveur</h2>
+    <p class="section-description">Les principales commandes officielles, organisées par fonction.</p>
+  </header>
+
+  <div class="command-categories">
+    <article class="command-category">
+      <h3>🛡️ Modération</h3>
+      <div class="command-list">
+        <div><code>/warn</code><span>Ajouter un avertissement à un membre.</span></div>
+        <div><code>/warns</code><span>Consulter les avertissements enregistrés.</span></div>
+        <div><code>/mute</code><span>Mettre temporairement un membre en sourdine.</span></div>
+        <div><code>/ban</code><span>Bannir un membre du serveur.</span></div>
+        <div><code>/clear</code><span>Supprimer plusieurs messages d’un salon.</span></div>
+      </div>
+    </article>
+
+    <article class="command-category">
+      <h3>🎫 Tickets et support</h3>
+      <div class="command-list">
+        <div><code>/panels</code><span>Afficher et gérer les panneaux de tickets.</span></div>
+        <div><code>/reclamer</code><span>Prendre en charge un ticket.</span></div>
+        <div><code>/ticket_transferer</code><span>Transférer un ticket à un autre membre du staff.</span></div>
+        <div><code>/ticket_reouvrir</code><span>Réouvrir un ticket fermé.</span></div>
+      </div>
+    </article>
+
+    <article class="command-category">
+      <h3>⚙️ Configuration et communauté</h3>
+      <div class="command-list">
+        <div><code>/config</code><span>Ouvrir la configuration du serveur.</span></div>
+        <div><code>/setup_secte</code><span>Installer la structure principale de la secte.</span></div>
+        <div><code>/poster_verification</code><span>Publier le panneau de vérification.</span></div>
+        <div><code>/poster_roles</code><span>Publier le panneau des rôles à réactions.</span></div>
+        <div><code>/partenariat</code><span>Gérer les demandes de partenariat.</span></div>
+      </div>
+    </article>
+
+    <article class="command-category">
+      <h3>🌿 Progression et utilitaires</h3>
+      <div class="command-list">
+        <div><code>/niveau</code><span>Afficher le niveau et l’expérience d’un membre.</span></div>
+        <div><code>/classement</code><span>Consulter le classement d’expérience.</span></div>
+        <div><code>/help</code><span>Afficher l’aide générale du bot.</span></div>
+        <div><code>/serveremojis</code><span>Afficher ou collecter les emojis du serveur.</span></div>
+        <div><code>/webhook</code><span>Ouvrir les outils de gestion des webhooks.</span></div>
+      </div>
+    </article>
   </div>
 </section>
 </main>
 
 <footer>
   <div><b>🏯・[SDS] Dao Suprême</b><p>De mortel à immortel, ensemble.</p></div>
-  <div><a href="terms.html">Conditions</a><a href="privacy.html">Confidentialité</a><a href="docs.html">Documentation</a></div>
+  <div><a href="terms.html">Conditions</a><a href="privacy.html">Confidentialité</a><a href="docs.html">Documentation</a><a class="server-invite-link" href="https://discord.gg/gZECKTkRWD" target="_blank" rel="noopener">Serveur Discord</a></div>
   <small>© 2026 Capitaine_Ship — Tous droits réservés.</small>
 </footer>
 <script src="js/config.js"></script>

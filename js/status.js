@@ -2,22 +2,22 @@
 (() => {
   const STATES = {
     connected: {
-      label: "🟢・Connecté",
+      label: "・Connecté",
       icon: "assets/status/connected.webp",
       detail: "Le bot fonctionne normalement."
     },
     disconnected: {
-      label: "🔴・Déconnecté",
+      label: "・Déconnecté",
       icon: "assets/status/disconnected.webp",
       detail: "Le bot est actuellement indisponible."
     },
     maintenance: {
-      label: "🟡・Maintenance",
+      label: "・Maintenance",
       icon: "assets/status/maintenance.webp",
       detail: "Une opération de maintenance est en cours."
     },
     updating: {
-      label: "🔵・Mise à jour",
+      label: "・Mise à jour",
       icon: "assets/status/updating.webp",
       detail: "Une nouvelle version est en cours de déploiement."
     }
@@ -49,6 +49,10 @@
       : "— ms";
     $("bot-uptime").textContent = formatUptime(payload.uptime);
     $("bot-version").textContent = payload.version || "—";
+    $("bot-guilds").textContent = Number.isFinite(payload.guilds) ? payload.guilds : "—";
+    $("bot-users").textContent = Number.isFinite(payload.users) ? payload.users : "—";
+    $("bot-commands").textContent = Number.isFinite(payload.commands) ? payload.commands : "—";
+    $("bot-cogs").textContent = Number.isFinite(payload.cogs) ? payload.cogs : "—";
     $("bot-last-check").textContent = new Date().toLocaleTimeString("fr-FR", {
       hour: "2-digit",
       minute: "2-digit"
