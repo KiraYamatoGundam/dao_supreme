@@ -3,7 +3,7 @@ window.DAO_SUPREME_CONFIG = {
 
   serverInviteUrl: "https://discord.gg/gZECKTkRWD",
 
-  statusEndpoint: "http://127.0.0.1:8080/status",
+  statusEndpoint: "https://girls-reforms-troops-lows.trycloudflare.com/status",
 
   fallbackStatus: "disconnected",
 
